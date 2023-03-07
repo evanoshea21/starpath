@@ -9,15 +9,19 @@ const inter = Inter({ subsets: ['latin'] })
 const pageCenter = {
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center'
-}
+  alignItems: 'center',
+  height: '120vh'
+};
 
 export default function Home() {
   return (
+    <>
     <Layout>
       <div style={pageCenter}>
         <h1>This is my home page</h1>
       </div>
     </Layout>
+    </>
+
   )
 }

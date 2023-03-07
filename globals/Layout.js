@@ -1,6 +1,6 @@
 import React from 'react'
 import {ContextProvider} from '../globals/context.js';
-import styles from '../styles/navbar.module.css';
+import classes from '../styles/navbar.module.css';
 
 const ContextContainer = ({children}) => {
   return (
@@ -12,16 +12,20 @@ const ContextContainer = ({children}) => {
 const Layout = ({children}) => {
   return (
     <ContextContainer>
-      <div style={styles.navbar}>
-        <p>Paragraph</p>
-        <div>
-          <p>Second Para</p>
-          <p>Third Para</p>
+      {/* HEADER */}
+      <div className={classes.navbar}>
+        <p>WEB LOGO</p>
+        <div className={classes.navItems}>
+          <p>ABOUT</p>
+          <p>CONTACT</p>
         </div>
       </div>
-      {/* do whatever layout here, like HEADER-FOOTER */}
+
+      {/* PAGE CONTENT */}
       {children}
-      <div style={styles.footer}>
+
+      {/* FOOTER */}
+      <div className={classes.footer}>
         This is a footer
       </div>
     </ContextContainer>
