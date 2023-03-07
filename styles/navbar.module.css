@@ -1,0 +1,12 @@
+.navbar {
+  background-color: aquamarine;
+  height: 8vw;
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: row; */
+}
+
+.footer {
+  background-color: grey;
+  height: 8vw;
+}

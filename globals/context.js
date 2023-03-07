@@ -8,23 +8,24 @@ const ContextProvider = ({children}) => {
   const [userData, setUserData] = React.useState({});
   // const [userToken, setUserToken] = React.useState('null');
   const [isLoading, setIsLoading] = React.useState(false);
+  const [testContext, setTestContext] = React.useState('im global');
 
   //listerer for sign in
-  React.useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if(user) {
-        console.log('loggin in...')
-        setIsLoading(true);
-        getSetUserData(user.email)
-        .then(res => setIsLoading(false))
-        .catch(err => console.log('couldnt getSetUser...'))
-      } else {
-        console.log('logging out...')
-        setUserData({});
-      }
-    })
-    return () => {unsubscribe()}
-  }, [])
+  // React.useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (user) => {
+  //     if(user) {
+  //       console.log('loggin in...')
+  //       setIsLoading(true);
+  //       getSetUserData(user.email)
+  //       .then(res => setIsLoading(false))
+  //       .catch(err => console.log('couldnt getSetUser...'))
+  //     } else {
+  //       console.log('logging out...')
+  //       setUserData({});
+  //     }
+  //   })
+  //   return () => {unsubscribe()}
+  // }, []);
 
 
   // const handleSignOut = () => {
@@ -39,6 +40,7 @@ const ContextProvider = ({children}) => {
     <Context.Provider value={{
       userData,
       isLoading,
+      testContext
       // handleSignOut
       }}>
       {children}
