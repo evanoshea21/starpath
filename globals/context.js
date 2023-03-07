@@ -1,5 +1,4 @@
 import React from 'react';
-import * as API from '../navScreens/API';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase.js";
 import { signOut } from "firebase/auth";

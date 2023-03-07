@@ -6,11 +6,7 @@ import { FIREBASE_API_KEY, FIREBASE_AUTH_DOMAIN, FIREBASE_PROJECT_ID, FIREBASE_S
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-console.log(process.env.FIREBASE_AUTH_DOMAIN);
-console.log(process.env.FIREBASE_PROJECT_ID);
-console.log(process.env.FIREBASE_STORAGE_BUCKET);
-console.log(process.env.FIREBASE_MESSAGING_SENDER_ID);
-console.log('here', process.env.FIREBASE_APP_ID);
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -23,7 +19,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
 
 export { auth };
