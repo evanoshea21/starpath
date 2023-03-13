@@ -12,7 +12,7 @@ const ContextContainer = ({children}) => {
 const Layout = ({children}) => {
   return (
     <ContextContainer>
-      {/* HEADER */}
+      {/* NAVBAR */}
       <div className={classes.navbar}>
         <p>WEB LOGO</p>
         <div className={classes.navItems}>
