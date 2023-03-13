@@ -17,9 +17,9 @@ console.log('env in API:\n', process.env.SERVER_IP, process.env.PORT);
 }
 //////////////////////////////////////////////////
 
-export function getAllInvolvedTrades(userID) {
+export function getUsers() {
   return new Promise((resolve,reject) => {
-    axiosCall('post', '/trades/involved', {userID})
+    axiosCall('get', '/users')
     .then(res => {
       resolve(res);
     })
