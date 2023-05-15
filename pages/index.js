@@ -1,18 +1,11 @@
 import classes from '../styles/Home.module.css';
 import React from 'react';
 import $ from 'jquery'
+import Home from '../components/home.js';
+import ContactForm from '../components/contact.js';
 
-export default function Home() {
-
-  React.useEffect(() => {
-    $('#titles').css('opacity','1');
-    $('#img').css('opacity','.3');
-    $('#logo, #btn').css('opacity','1');
-
-
-  },[]);
-
-
+export default function HomePage() {
+  const [showContact, setShowContact] = React.useState(false);
 
 
   return (
@@ -23,17 +16,22 @@ export default function Home() {
         <h1 id='logo' className={classes.logo}>Starpath<br/>Robotics</h1>
 
         <div id='btn' className={classes.btnBox}>
-          <button className={classes.contactBtn} >Contact</button>
+          <button className={classes.contactBtn} onClick={() => setShowContact((p) => !p)} >Contact</button>
         </div>
       </div>
 
-      <div id='titles' className={classes.titles}>
-        <h1 className={classes.title} >Making Life Multi-Planetary</h1>
-        <h2 className={classes.subtitle} >We are a company that... fill this section in with your own subheader if you want to; filling up words here.</h2>
+      {showContact ? (
+        <ContactForm />
+      ) : (
+        <Home />
+      )}
+
+
+      <img className={classes.bgImage}  id='img' src='/stars2.jpg' draggable="false"></img>
+
       </div>
 
-      <img id='img' src='/stars2.jpg' draggable="false"></img>
-    </div>
+    {/* <ContactForm /> */}
     </>
 
   )

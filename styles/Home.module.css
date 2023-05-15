@@ -8,7 +8,45 @@
   background-color: black;
 }
 
-.main img {
+.moon {
+  position: absolute;
+  /* position: relative; */
+  z-index: 10;
+  scale: 80%;
+  top: 45%;
+  left: 25%;
+  transform: translate(-60%,-60%);
+  /* border: 10px solid red; */
+}
+@media (max-width: 620px) {
+  .moon {
+    scale: 50%;
+    top: 30%;
+    /* left: -15%; */
+  }
+}
+@media (max-width: 980px) {
+  .shade {
+    background-color: rgba(0, 0, 0, 0.345);
+  }
+}
+.shade {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+}
+
+.moonImg {
+  filter:contrast(120%);
+  transform:rotate(0deg);
+}
+.moonImg::before {
+  content: 'cndsn';
+  position: absolute;
+  z-index: 30;
+}
+
+.bgImage {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -33,6 +71,7 @@
   color: white;
 }
 .logo, .btnBox {
+  font-weight: 400;
   opacity: 0;
   transition: all 2s ease;
 }
@@ -60,6 +99,7 @@
 }
 .contactBtn:hover {
   background-color: rgba(192, 192, 192, 0.434);
+  cursor: pointer;
   /* color: black; */
 }
 
