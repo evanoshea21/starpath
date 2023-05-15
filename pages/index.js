@@ -20,7 +20,7 @@ export default function Home() {
     <div className={classes.main}>
 
       <div className={classes.nav}>
-        <h1 id='logo' className={classes.logo}>Starship<br/>Robotics</h1>
+        <h1 id='logo' className={classes.logo}>Starpath<br/>Robotics</h1>
 
         <div id='btn' className={classes.btnBox}>
           <button className={classes.contactBtn} >Contact</button>
