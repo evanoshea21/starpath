@@ -16,7 +16,8 @@ export default function HomePage() {
         <h1 id='logo' className={classes.logo}>Starpath<br/>Robotics</h1>
 
         <div id='btn' className={classes.btnBox}>
-          <button className={classes.contactBtn} onClick={() => setShowContact((p) => !p)} >Contact</button>
+
+          <button className={classes.contactBtn} onClick={() => setShowContact((p) => !p)} >{showContact ? 'Back' : 'Contact'}</button>
         </div>
       </div>
 

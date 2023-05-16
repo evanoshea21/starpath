@@ -31,7 +31,7 @@ const TextFieldS = styled(TextField)({
     borderBottomColor: 'white',
   },
   '& .MuiInput-underline:hover': {
-      borderBottomColor: 'yellow',
+      borderBottomColor: 'blue',
     },
     '& .MuiInput-root': {
       color: 'white'
