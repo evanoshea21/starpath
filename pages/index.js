@@ -8,19 +8,28 @@ import Particles from '../components/particles.js';
 export default function HomePage() {
   const [showContact, setShowContact] = React.useState(false);
 
-  function reduceOpacity() {
-    $('#titles').css('opacity','0');
-    // $('#img').css('opacity','0');
-    $('#moonImg').css('opacity','0');
+  const [windowSize, setWindowSize] = React.useState([]);
 
-    // $('#contact').css('opacity','0');
+  React.useEffect(() => { //window resize
+    if(window) {
+      const handleWindowResize = () => {
+        setWindowSize([window.innerWidth, window.innerHeight]);
+      };
+      handleWindowResize();
+      window.addEventListener('resize', handleWindowResize);
 
-  }
+      return () => {
+        window.removeEventListener('resize', handleWindowResize);
+      };
+    }
+  }, []);
 
 
   return (
     <>
-<Particles/>
+    {windowSize[0] > 500 && (
+      <Particles/>
+    )}
     <div className={classes.main}>
 
       <div className={classes.nav}>
@@ -42,7 +51,9 @@ export default function HomePage() {
         <Home />
       )}
 
-      {/* <img className={classes.bgImage}  id='img' src='/stars2.jpg' draggable="false"></img> */}
+    {windowSize[0] <= 600 && (
+      <img className={classes.bgImage}  id='img' src='/stars2.jpg' draggable="false"></img>
+    )}
 
       </div>
 

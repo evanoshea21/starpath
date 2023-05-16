@@ -5,7 +5,12 @@
   height: 100vh;
 
   overflow: hidden;
-  /* background-color: blue; */
+}
+@media (max-width: 600px) {
+  .main {
+    background-color: black;
+
+  }
 }
 
 
@@ -22,7 +27,7 @@
 @media (max-width: 620px) {
   .moon {
     scale: 60%;
-    top: 30%;
+    top: 40%;
     /* left: -15%; */
   }
 }
@@ -51,7 +56,7 @@
   height: 100%;
   object-fit: cover;
 
-  /* opacity: 0; */
+  opacity: .4;
   /* transition: all 2s ease; */
 }
 
