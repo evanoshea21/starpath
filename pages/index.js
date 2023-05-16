@@ -3,6 +3,7 @@ import React from 'react';
 import $ from 'jquery'
 import Home from '../components/home.js';
 import ContactForm from '../components/contact.js';
+import Particles from '../components/particles.js';
 
 export default function HomePage() {
   const [showContact, setShowContact] = React.useState(false);
@@ -19,6 +20,7 @@ export default function HomePage() {
 
   return (
     <>
+<Particles/>
     <div className={classes.main}>
 
       <div className={classes.nav}>
@@ -40,8 +42,7 @@ export default function HomePage() {
         <Home />
       )}
 
-
-      <img className={classes.bgImage}  id='img' src='/stars2.jpg' draggable="false"></img>
+      {/* <img className={classes.bgImage}  id='img' src='/stars2.jpg' draggable="false"></img> */}
 
       </div>
 

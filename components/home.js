@@ -4,13 +4,6 @@ import $ from 'jquery'
 
 const Home = () => {
 
-  React.useEffect(() => {
-    $('#titles').css('opacity','1');
-    $('#img').css('opacity','.3');
-    $('#logo, #btn, #moonImg').css('opacity','1');
-  });
-
-
   return (
     <>
     <div id='titles' className={classes.titles}>

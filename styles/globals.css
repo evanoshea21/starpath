@@ -12,12 +12,22 @@
 }
 
 body, html {
-  background-color: black;
+  /* background-color: black; */
   padding: 0;
   margin: 0;
 
   font-family: var(--font2);
 }
+
+.view {
+  opacity: 1;
+  pointer-events: visible;
+}
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 
 

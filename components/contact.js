@@ -68,20 +68,6 @@ const Contact = () => {
 
   }, [name, email])
 
-  function sendEmail() {
-    window.Email.send({
-      Host : "smtp.gmail.com",
-      Username : "evanoshea21@gmail.com",
-      Password : "csdjcnsdkj",
-      To : 'evan.p.oshea@gmail.com',
-      From : "evanoshea21@gmail.com",
-      Subject : "This is the subject",
-      Body : "And this is the body"
-  }).then(
-    message => alert(message)
-  );
-  }
-
 
   return (
   <div id='contact' className={classes.main}>
@@ -138,7 +124,7 @@ const Contact = () => {
 
       <div className={classes.btn}>
         <ButtonS
-        onClick={sendEmail}
+        // onClick={sendEmail}
         sx={{width: '40%'}}
         variant="outlined">Send</ButtonS>
       </div>
