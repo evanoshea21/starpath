@@ -12,6 +12,9 @@
   width: 90vw;
   max-width: 640px;
 
+  min-height: 300px;
+  transition: all .5s ease;
+
   color: white;
   /* color: black; */
 }
@@ -45,5 +48,18 @@
 
 .textarea {
   width: 90%;
+}
+.thanks {
+  /* border: 1px solid red; */
+  color: rgb(179, 179, 179);
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.thanks p {
+  margin: 20px;
+  text-align: center;
 }
 
