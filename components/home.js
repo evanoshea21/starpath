@@ -20,7 +20,7 @@ const Home = () => {
 
   <div className={classes.moon}>
     <div className={classes.shade}></div>
-    <img className={classes.moonImg}  id='moon' src='/moon.png' draggable="false"></img>
+    <img id='moonImg' className={classes.moonImg} src='/moon.png' draggable="false"></img>
   </div>
     </>
   )
