@@ -8,7 +8,7 @@ const Home = () => {
     $('#titles').css('opacity','1');
     $('#img').css('opacity','.3');
     $('#logo, #btn, #moonImg').css('opacity','1');
-  },[]);
+  });
 
 
   return (

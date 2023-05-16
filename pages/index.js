@@ -7,6 +7,12 @@ import ContactForm from '../components/contact.js';
 export default function HomePage() {
   const [showContact, setShowContact] = React.useState(false);
 
+  function reduceOpacity() {
+    $('#titles').css('opacity','0');
+    $('#img').css('opacity','0');
+    $('#moonImg').css('opacity','0');
+  }
+
 
   return (
     <>
@@ -17,7 +23,9 @@ export default function HomePage() {
 
         <div id='btn' className={classes.btnBox}>
 
-          <button className={classes.contactBtn} onClick={() => setShowContact((p) => !p)} >{showContact ? 'Back' : 'Contact'}</button>
+          <button className={classes.contactBtn} onClick={() => {reduceOpacity();
+            setShowContact((p) => !p)
+            }} >{showContact ? 'Back' : 'Contact'}</button>
         </div>
       </div>
 
