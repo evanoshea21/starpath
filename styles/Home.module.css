@@ -101,6 +101,9 @@
   cursor: pointer;
   /* color: black; */
 }
+@media (max-width: 500px) {
+  .contactBtn:hover { background-color: transparent; }
+}
 
 /* TITLES */
 .titles {
