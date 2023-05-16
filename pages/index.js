@@ -9,8 +9,11 @@ export default function HomePage() {
 
   function reduceOpacity() {
     $('#titles').css('opacity','0');
-    $('#img').css('opacity','0');
+    // $('#img').css('opacity','0');
     $('#moonImg').css('opacity','0');
+
+    // $('#contact').css('opacity','0');
+
   }
 
 
@@ -24,7 +27,9 @@ export default function HomePage() {
         <div id='btn' className={classes.btnBox}>
 
           <button className={classes.contactBtn} onClick={() => {reduceOpacity();
+          setTimeout(() => {
             setShowContact((p) => !p)
+          }, 0);
             }} >{showContact ? 'Back' : 'Contact'}</button>
         </div>
       </div>

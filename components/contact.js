@@ -58,6 +58,9 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   // const theme = useTheme();
 
+  React.useEffect(() => {
+    $('#contact').css('opacity','1');
+  });
 
   useEffect(() => {
     // console.log('name: ', name);
@@ -65,10 +68,23 @@ const Contact = () => {
 
   }, [name, email])
 
+  function sendEmail() {
+    window.Email.send({
+      Host : "smtp.gmail.com",
+      Username : "evanoshea21@gmail.com",
+      Password : "csdjcnsdkj",
+      To : 'evan.p.oshea@gmail.com',
+      From : "evanoshea21@gmail.com",
+      Subject : "This is the subject",
+      Body : "And this is the body"
+  }).then(
+    message => alert(message)
+  );
+  }
 
 
   return (
-  <div className={classes.main}>
+  <div id='contact' className={classes.main}>
     <h1>Contact Us</h1>
     {/* <CssTextField
     // focused={true}
@@ -122,6 +138,7 @@ const Contact = () => {
 
       <div className={classes.btn}>
         <ButtonS
+        onClick={sendEmail}
         sx={{width: '40%'}}
         variant="outlined">Send</ButtonS>
       </div>
