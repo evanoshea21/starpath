@@ -84,7 +84,7 @@ const Contact = () => {
 
   return (
   <div id='contact' className={classes.main}>
-    <h1 onClick={() => setMailSent(p => !p)} >Contact Us</h1>
+    <h1>Contact Us</h1>
     {!mailsent ? (
     <div className={classes.form}>
 

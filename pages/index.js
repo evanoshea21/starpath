@@ -37,10 +37,8 @@ export default function HomePage() {
 
         <div id='btn' className={classes.btnBox}>
 
-          <button className={classes.contactBtn} onClick={() => {reduceOpacity();
-          setTimeout(() => {
-            setShowContact((p) => !p)
-          }, 0);
+          <button className={classes.contactBtn} onClick={() => {
+            setShowContact((p) => !p);
             }} >{showContact ? 'Back' : 'Contact'}</button>
         </div>
       </div>
