@@ -4,27 +4,32 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      // Purple and green play nicely together.
-      main: '#fff',
+      main: '#f2f2f2',
     },
     secondary: {
-      // This is green.A700 as hex.
       main: '#fff',
+    },
+  },
+  overrides: {
+    MuiInputBase: {
+      input: {
+        background: "#fff",
+      },
     },
   },
 });
 
-
 export default function Document() {
+
   return (
     <Html lang="en">
       <Head />
-      <body>
       <ThemeProvider theme={theme}>
+      <body>
         <Main />
         <NextScript />
-      </ThemeProvider>
       </body>
+      </ThemeProvider>
     </Html>
   )
 }

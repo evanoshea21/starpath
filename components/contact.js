@@ -1,20 +1,62 @@
 import React, { useState, useEffect } from 'react'
 import classes from '../styles/Contact.module.css';
 import $ from 'jquery'
-import { useTheme } from '@mui/material/styles';
+// import { useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
+const TextFieldS = styled(TextField)({
+  // label when focused
+  // '& label.Mui-focused': {
+  //   color: 'grey',
+  // },
+  // label NOT focused
+  '& label.MuiInputLabel-root': {
+    color: 'grey',
+  },
+  // underline, before/after focus
+  '&:hover': {
+    '& .MuiInput-underline:before': {
+      borderBottomColor: 'white',
+    }
+  },
+  '& .MuiInput-underline:before': {
+    borderBottomColor: 'white',
+  },
+  '& .MuiInput-underline:after': {
+    borderBottomColor: 'white',
+  },
+  '& .MuiInput-underline:hover': {
+      borderBottomColor: 'yellow',
+    },
+    '& .MuiInput-root': {
+      color: 'white'
+    },
+});
+
+const ButtonS = styled(Button)({
+  '&:hover': {
+    '& .MuiButton-outlined': {
+      color: 'white',
+      borderColor: 'white',
+      backgroundColor: 'green',
+    }
+  },
+  color: 'white',
+  borderColor: 'white',
+  padding: 8,
+  borderRadius: 4,
+});
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
-  const theme = useTheme();
+  // const theme = useTheme();
 
 
   useEffect(() => {
@@ -27,7 +69,12 @@ const Contact = () => {
 
   return (
   <div className={classes.main}>
-    <h1>Contact Form</h1>
+    <h1>Contact Us</h1>
+    {/* <CssTextField
+    // focused={true}
+    // label="Custom CSS" id="custom-css-outlined-input"
+    id="standard-basic" label="Name" variant="standard"
+    /> */}
 
     {/* <Box
       component="form"
@@ -42,40 +89,28 @@ const Contact = () => {
     > */}
     <div className={classes.form}>
 
-      <TextField onChange={(e) => setName(e.target.value)}
-      sx={{
-        '& > :not(style)': {width: '25ch',
-      // color: theme.palette.primary.main
-    },
-      }}
-      color='primary'
-      autoFocus
-      // FormHelperTextProps={{
-      //   style: {
-      //     color: 'white',
-      //     borderColor: 'white !important'
-      //   }
-      // }}
-      // InputProps={{
-      //   style: {
-      //     color: 'white',
-      //     borderColor: 'white !important'
-      //   }
-      // }}
-      // InputLabelProps={{
-      //   style: {
-      //     color: 'white',
-      //     borderColor: 'white !important'
-      //   }
-      // }}
+      <TextFieldS onChange={(e) => setName(e.target.value)}
 
+      sx={{width: '25ch',
+      color: '#fff'
+          // backgroundColor: '#fff',
+          // border: '1px solid #fff',
+      // color: theme.palette.primary.main
+      }}
+
+      InputProps={{
+        sx: {
+          color: '#fff',
+          textTransform: 'capitalize',
+        },
+      }}
       id="standard-basic" label="Name" variant="standard" />
-      <TextField onChange={(e) => setEmail(e.target.value)}
-      sx={{
-        '& > :not(style)': {width: '25ch' },
+
+      <TextFieldS onChange={(e) => setEmail(e.target.value)}
+      sx={{width: '25ch'
       }}
       id="standard-basic" label="Email" variant="standard" />
-      <TextField onChange={(e) => setMessage(e.target.value)}
+      <TextFieldS onChange={(e) => setMessage(e.target.value)}
       id="standard-basic" label="Message"
       multiline
       rows={4}
@@ -86,9 +121,9 @@ const Contact = () => {
       variant="standard" />
 
       <div className={classes.btn}>
-        <Button
+        <ButtonS
         sx={{width: '40%'}}
-        variant="outlined">Send</Button>
+        variant="outlined">Send</ButtonS>
       </div>
 
     </div>
