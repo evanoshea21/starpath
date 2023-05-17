@@ -32,16 +32,20 @@ export default function HomePage() {
     )}
     <div className={classes.main}>
 
-      <div className={classes.nav}>
-        <h1 id='logo' className={classes.logo}>Starpath<br/>Robotics</h1>
+        <div className={classes.nav}>
+          {/* <h1 id='logo' className={classes.logo}>Starpath<br/>Robotics</h1> */}
+          <div className={classes.logoBox}>
+            <img className={classes.logoImg}  src='/logo.svg'></img>
+          </div>
 
-        <div id='btn' className={classes.btnBox}>
+          <div id='btn' className={classes.btnBox}>
 
-          <button className={classes.contactBtn} onClick={() => {
-            setShowContact((p) => !p);
-            }} >{showContact ? 'Back' : 'Contact'}</button>
+            <button className={classes.contactBtn} onClick={() => {
+              setShowContact((p) => !p);
+              }} >{showContact ? 'Back' : 'Contact'}</button>
+          </div>
         </div>
-      </div>
+
 
       {showContact ? (
         <ContactForm />

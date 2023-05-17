@@ -56,16 +56,21 @@
   height: 100%;
   object-fit: cover;
 
-  opacity: .4;
+  opacity: .35;
   /* transition: all 2s ease; */
 }
 
 /* NAV */
+
 .nav {
   position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 20;
 
   width: 100%;
+  max-width: 1400px;
 
   display: flex;
   justify-content: space-between;
@@ -74,6 +79,18 @@
 
   color: white;
 }
+
+.logoBox {
+  width: 200px;
+  height: 120px;
+  /* border: 1px solid red; */
+  object-fit: contain;
+}
+.logoImg {
+  width: 100%;
+  height: 100%;
+}
+
 .logo, .btnBox {
   font-weight: 400;
   /* opacity: 0; */
@@ -108,6 +125,8 @@
   /* color: black; */
 }
 @media (max-width: 500px) {
+  .contactBtn { margin-right: 10px;
+  }
   .contactBtn:hover { background-color: transparent; }
 }
 
