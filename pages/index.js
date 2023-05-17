@@ -7,6 +7,7 @@ import Particles from '../components/particles.js';
 
 export default function HomePage() {
   const [showContact, setShowContact] = React.useState(false);
+  const [firstLogo, setFirstLogo] = React.useState(true);
 
   const [windowSize, setWindowSize] = React.useState([]);
 
@@ -34,8 +35,8 @@ export default function HomePage() {
 
         <div className={classes.nav}>
           {/* <h1 id='logo' className={classes.logo}>Starpath<br/>Robotics</h1> */}
-          <div className={classes.logoBox}>
-            <img className={classes.logoImg}  src='/logo.svg'></img>
+          <div onClick={() => setFirstLogo(p => !p)}  className={classes.logoBox}>
+            <img className={classes.logoImg}  src={`/${firstLogo ? 'logo' : 'logo2'}.svg`}></img>
           </div>
 
           <div id='btn' className={classes.btnBox}>
