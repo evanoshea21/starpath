@@ -28,7 +28,7 @@
 .form > div {
   margin: 20px;
 }
-@media (max-width: 650px) {
+@media (max-width: 650px), (max-height: 650px) {
   .form > div {
     margin: 5px;
   }

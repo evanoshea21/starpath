@@ -35,7 +35,9 @@ export default function HomePage() {
 
         <div className={classes.nav}>
           {/* <h1 id='logo' className={classes.logo}>Starpath<br/>Robotics</h1> */}
-          <div onClick={() => setFirstLogo(p => !p)}  className={classes.logoBox}>
+          <div style={{
+            width: firstLogo ? '200px' : '170px'
+          }} onClick={() => setFirstLogo(p => !p)}  className={classes.logoBox}>
             <img className={classes.logoImg}  src={`/${firstLogo ? 'logo' : 'logo2'}.svg`}></img>
           </div>
 
