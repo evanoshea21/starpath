@@ -4,12 +4,25 @@ import $ from 'jquery'
 
 const Home = () => {
 
+  const [i, setI] = React.useState(0);
+
+  React.useEffect(() => {
+    console.log('i', i)
+  },[i]);
+
   return (
     <>
-    <div id='titles' className={classes.titles}>
-    <h1 className={classes.title} >Making Life Multi-Planetary</h1>
-    <h2 className={classes.subtitle} >We are a company that... fill this section in with your own subheader if you want to; filling up words here.</h2>
-  </div>
+    <div id='titles' className={classes.titles}
+    onClick={() => setI(p => (p + 1) % 7)}
+    >
+    <h1 style={{
+      fontFamily: `var(--font${i})`
+    }} className={classes.title} >Making Life<br/><span className={classes.gradientText} >Multi-Planetary</span><span style={{fontSize: '.8rem'}}>font:{i}</span> </h1>
+    <h2 className={classes.subtitle} >Producing starship-scale propellant in space to enable civilizations on the Moon, Mars, and beyond.</h2>
+    </div>
+    {/* <div className={classes.gradient2}>
+      Hello
+    </div> */}
 
   <div className={classes.moon}>
     <div className={classes.shade}></div>
