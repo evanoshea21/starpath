@@ -61,6 +61,11 @@ const Contact = () => {
 
   const [sending, setSending] = React.useState(false);
   const [mailsent, setMailSent] = React.useState(false);
+  const [o, setO] = React.useState('0');
+
+  React.useEffect(() => {
+    setO('1')
+  },[]);
   // const theme = useTheme();
   //saruav email -> service_fhgycm9
   //test email -> service_b6rp3d8
@@ -83,7 +88,11 @@ const Contact = () => {
 
 
   return (
-  <div id='contact' className={classes.main}>
+  <div id='contact' className={classes.main}
+  style={{
+    opacity: o,
+    transition: 'opacity 1.2s ease'
+  }}>
     <h1>Contact Us</h1>
     {!mailsent ? (
     <div className={classes.form}>
