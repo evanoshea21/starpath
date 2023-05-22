@@ -171,9 +171,14 @@
   border:1px solid black;
   font-size:30px;
   background: linear-gradient(
+    130deg, #287ab8 40%,
+    #cf450e 60%);
+  /* background: linear-gradient(
+    130deg, #287ab8 40%,
+    #cf450e 60%); */
+  /* background: linear-gradient(
     130deg, rgb(171, 30, 30) 40%,
-    /* #ffffff, */
-    rgb(182, 8, 164) 60%);
+    rgb(182, 8, 164) 60%); */
 
   background-size: 200% 200%;
 
@@ -185,11 +190,15 @@
 
 .gradientText {
   /* background: -webkit-linear-gradient(90deg, rgb(189, 24, 24), rgb(197, 15, 178)); */
-  text-shadow: 0 7px 8px rgba(146, 9, 237, 0.31);
+  /* text-shadow: 0 7px 8px rgba(146, 9, 237, 0.31); */
   background: -webkit-linear-gradient(100deg,
+   #287ab8 30%,
+   #cf450e
+   );
+  /* background: -webkit-linear-gradient(100deg,
    rgb(5, 39, 209),
    rgb(219, 0, 40)
-   );
+   ); */
   /* color: rgb(201, 38, 38); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
