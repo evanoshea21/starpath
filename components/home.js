@@ -15,7 +15,7 @@ const Home = () => {
     setO('1');
 
     setTimeout(() => {
-      setO1(['1', 'translateY(0px)']);
+      setO1(['1', 'translateY(0px)'].slice());
     }, 500);
     setTimeout(() => {
       setO2('1');

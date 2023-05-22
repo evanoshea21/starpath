@@ -136,7 +136,9 @@
   /* color: black; */
 }
 @media (max-width: 500px) {
-  .contactBtn { margin-right: 10px;
+  .contactBtn {
+    margin-right: 10px;
+    padding: 10px 20px;
   }
   .contactBtn:hover { background-color: transparent; }
 }
