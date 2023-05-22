@@ -167,28 +167,6 @@
   text-align: center;
   /* border: 1px solid red; */
 }
-.gradient2 {
-  height:300px;
-  width:300px;
-  border:1px solid black;
-  font-size:30px;
-  background: linear-gradient(
-    130deg, #287ab8 40%,
-    #cf450e 60%);
-  /* background: linear-gradient(
-    130deg, #287ab8 40%,
-    #cf450e 60%); */
-  /* background: linear-gradient(
-    130deg, rgb(171, 30, 30) 40%,
-    rgb(182, 8, 164) 60%); */
-
-  background-size: 200% 200%;
-
-  -webkit-animation: Animation 10s ease infinite;
-  -moz-animation: Animation 10s ease infinite;
-  animation: Animation 10s ease infinite;
-}
-
 
 .gradientText {
   /* background: -webkit-linear-gradient(90deg, rgb(189, 24, 24), rgb(197, 15, 178)); */
@@ -206,11 +184,16 @@
   -webkit-text-fill-color: transparent;
 
   background-size: 200% 200%;
-
-  -webkit-animation: Animation 8s ease infinite;
-  -moz-animation: Animation 8s ease infinite;
-  animation: Animation 8s ease infinite;
 }
+@media (min-width: 600px) {
+  .gradientText {
+
+    -webkit-animation: Animation 8s ease infinite;
+    -moz-animation: Animation 8s ease infinite;
+    animation: Animation 8s ease infinite;
+  }
+}
+
 
 @-webkit-keyframes Animation {
   0%{background-position:10% 0%}
