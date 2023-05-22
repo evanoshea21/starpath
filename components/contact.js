@@ -21,7 +21,7 @@ const TextFieldS = styled(TextField)({
   // underline, before/after focus
   '&:hover': {
     '& .MuiInput-underline:before': {
-      borderBottomColor: 'white',
+      borderBottomColor: '#f2f2f2',
     }
   },
   '& .MuiInput-underline:before': {
