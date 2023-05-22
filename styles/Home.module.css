@@ -160,6 +160,7 @@
   max-width: 650px;
 }
 .title {
+  font-family: var(--font7);
   font-size: 3.2rem;
   text-align: center;
   /* border: 1px solid red; */
